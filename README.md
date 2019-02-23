@@ -21,3 +21,10 @@ På denna sida kan den inloggade användare se sin aktuella status gällande hur
 På denna sida sköts själva tradingen, man ser alla användare som har ett lager av bananer. Obs en nyregistrerad användar måste först göra en insättning och därefter köpa ett gäng bananer från någon annan för att synas i denna tabell.
 
 För att handla väljer man bara den kvantitet man vill köpa och trycker på knappen 'Buy'.
+
+# Krav 5: Tester frontend (optionell)
+- USE-CASE #1 - Get Title = Testar att hämta titeln
+- USE-CASE #2 - Navigate To /price = Testar att trycka på "Banana stock prices" knappen och verifiera att man kommer till sidan price
+- USE-CASE #3 - Navigate to /user/login = Testar att trycka på login knappen och verifiera att man kommer till user/login
+- USE-CASE #4 - Go To /trade = Gå till sidan trade och verifiera att rätt h4 rubrik hittas
+- USE-CASE #5 - Go To /user = Gå till sidan user och verifiera att rätt h4 rubrik hittas

@@ -23,6 +23,7 @@
     "socket.io": "^2.1.1"
   },
   "devDependencies": {
+    "dotenv-cli": "^1.4.0",
     "http-server": "^0.11.1",
     "mocha": "^4.1.0",
     "selenium-webdriver": "^3.6.0"
@@ -33,6 +34,7 @@
     "start": "react-scripts start",
     "_comment_start": "npm-run-all -p watch-css start-js",
     "build": "react-scripts build",
+    "build-dev": "dotenv -e .env.development react-scripts build",
     "_test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-test": "node node_modules/http-server/bin/http-server -p 8082 src",

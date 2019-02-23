@@ -1,13 +1,23 @@
-Course page Ramverk2 - v2 @BTH
+BANANA - Trading: Frontend
 ========================================
-Part of course Ramverk2 (framework), frontend, @BTH 2019.
 
-## Design template
+# Krav 2: Frontend
+Till frontend-delen har jag valt att använda ramverket React, detta då jag sedan tidigare använt ramverket till redovisningssidan och ville forstätta att förkovra mig i detta.
 
-**[Light Bootstrap Dashboard React](http://lbd-react.creative-tim.com/)** is an admin dashboard template designed to be beautiful and simple. It is built on top of [React Bootstrap](https://react-bootstrap.github.io/), using [Light Bootstrap Dashboard](https://www.creative-tim.com/product/light-bootstrap) and it is fully responsive. It comes with a big collections of elements that will offer you multiple possibilities to create the app that best fits your needs. It can be used to create admin panels, project management systems, web applications backend, CMS or CRM.
+Sidan består av 4 delar:
 
-More products from Creative Tim: <https://www.creative-tim.com/bootstrap-themes>
+## Del 1 - trading.holmersson.se/price (även del av Krav 3: Realtid)
+Sidan du möts av är realtids priserna på bananerna. Sidan visar två grafer en med det lägsta säljpriset och en med det högsta säljpriset. Denna del är publik och vilken användare som kan komma åt denna del.
+För denna del hade jag stora bekymmer att få igång på produktionsserven. Modulpaketen som används för att visualisera diagramen (Rickshaw) verkar inte kunna minifieras med det verktyg som React använder för att skapa produktionsfilerna.
 
-[LICENSE]: ./LICENSE.md
-[version-badge]: https://img.shields.io/badge/version-1.2.0-blue.svg
-[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+## Del 2 - trading.holmersson.se/user/login
+För att komma åt övriga delar på sidan måste användaren logga in. På server sidan används bcrypt för hantera lösenordskrypteringen och om godkänd inloggning retuneras en JWT för fortsatt identifiering.
+För test kan kontot admin@admin.com med lösenordet admin användas.
+
+## Del 3 - trading.holmersson.se/user
+På denna sida kan den inloggade användare se sin aktuella status gällande hur mycket pengar hen har på kontot, sitt egna lager som finns ute till försäljning och det försäljningspris han begär. På denna sidan kan hen även göra en insättning (det förutsätts att hen redan har ett registrerat kontokort), man har också möjlighet att justera sitt försäljningspris.
+
+##Del 4 - trading.holmersson.se/trade
+På denna sida sköts själva tradingen, man ser alla användare som har ett lager av bananer. Obs en nyregistrerad användar måste först göra en insättning och därefter köpa ett gäng bananer från någon annan för att synas i denna tabell.
+
+För att handla väljer man bara den kvantitet man vill köpa och trycker på knappen 'Buy'.

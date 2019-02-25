@@ -1,8 +1,8 @@
-import Price from "views/Price/Price";
-import UserLogin from "views/User/UserLogin";
-import User from "views/User/User";
-import Trade from "views/Trade/Trade";
-import Message from "views/Message/Message";
+import Price from "../views/Price/Price";
+import UserLogin from "../views/User/UserLogin";
+import User from "../views/User/User";
+import Trade from "../views/Trade/Trade";
+import Message from "../views/Message/Message";
 
 
 const dashboardRoutes = [

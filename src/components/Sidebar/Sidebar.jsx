@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
-import imagine from "assets/img/sidebar-3.jpg";
-import logo from "assets/img/reactlogo.png";
+import imagine from "../../assets/img/sidebar-3.jpg";
+import logo from "../../assets/img/reactlogo.png";
 
-import dashboardRoutes from "routes/dashboard.jsx";
-import {reactLocalStorage} from 'reactjs-localstorage';
+import dashboardRoutes from "../../routes/dashboard.jsx";
+// import {reactLocalStorage} from 'reactjs-localstorage';
 
 
 class Sidebar extends Component {
@@ -17,11 +17,15 @@ class Sidebar extends Component {
     };
   }
   activeRoute(routeName) {
-      if (reactLocalStorage.get("token") !== 'false') {
-          this.state.login = true;
-      } else {
-          this.state.login = false;
-      }
+      // if (reactLocalStorage.get("token") !== 'false') {
+      //     this.setState({
+      //         login: true
+      //     });
+      // } else {
+      //     this.setState({
+      //         login: false
+      //     });
+      // }
       return this.props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
   }
   updateDimensions() {

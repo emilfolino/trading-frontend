@@ -5,7 +5,7 @@ import {
   Col,
 } from "react-bootstrap";
 
-import { Card } from "components/Card/Card.jsx";
+import { Card } from "../../components/Card/Card.jsx";
 import {reactLocalStorage} from 'reactjs-localstorage';
 
 

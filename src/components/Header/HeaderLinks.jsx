@@ -13,12 +13,16 @@ class HeaderLinks extends Component {
     }
 
     checkLogin() {
-        if (reactLocalStorage.get("token") !== 'false') {
-            this.state.buttonLabel = "Logout";
-            return true;
-        }
-
-        this.state.buttonLabel = "Login";
+        // if (reactLocalStorage.get("token") !== 'false') {
+        //     this.setState({
+        //         buttonLabel: "Logout"
+        //     });
+        //     return true;
+        // }
+        //
+        // this.setState({
+        //     buttonLabel: "Login"
+        // });
         return false;
     }
 
@@ -30,7 +34,9 @@ class HeaderLinks extends Component {
 
     renderRedirect = () => {
       if (this.state.redirect) {
-          this.state.redirect = false;
+          this.setState({
+              redirect: false
+          });
           if (this.checkLogin()) {
               reactLocalStorage.set('token', false);
               reactLocalStorage.set('message', "User logged out.");

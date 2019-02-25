@@ -90,6 +90,8 @@ class Price extends Component {
                         name: rate.name,
                         graph: graph,
                     };
+
+                    return rate;
                 });
                 first = false;
             }
@@ -101,6 +103,8 @@ class Price extends Component {
                 data[rate.name] = rate.current;
                 graphs[slug].graph.series.addData(data);
                 graphs[slug].graph.render();
+
+                return rate;
             });
         });
     }

@@ -6,7 +6,7 @@ import {
   Table
 } from "react-bootstrap";
 
-import { Card } from "components/Card/Card.jsx";
+import { Card } from "../../components/Card/Card.jsx";
 import {reactLocalStorage} from 'reactjs-localstorage';
 
 const thArray = ["Seller", "Stock (POUNDS)", "Price (SEK/POUNDS)", "Buy (POUNDS)"];

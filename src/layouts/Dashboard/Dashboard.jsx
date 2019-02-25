@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import Header from "components/Header/Header";
-import Sidebar from "components/Sidebar/Sidebar";
+import Header from "../../components/Header/Header";
+import Sidebar from "../../components/Sidebar/Sidebar";
 import {reactLocalStorage} from 'reactjs-localstorage';
 
-import dashboardRoutes from "routes/dashboard.jsx";
+import dashboardRoutes from "../../routes/dashboard.jsx";
 
 class Dashboard extends Component {
 
     constructor(props) {
         super(props);
         reactLocalStorage.set('token', false);
-        reactLocalStorage.set('message', 'No message');        
+        reactLocalStorage.set('message', 'No message');
       }
 
   componentDidUpdate(e) {
